@@ -21,9 +21,17 @@ start-gui:
 generate:
 	$(BITCOINCLI) $(B1) generate $(BLOCKS)
 
-getinfo:
-	$(BITCOINCLI) $(B1) getinfo
-	$(BITCOINCLI) $(B2) getinfo
+getnetworkinfo:
+	$(BITCOINCLI) $(B1) getnetworkinfo
+	$(BITCOINCLI) $(B2) getnetworkinfo
+
+getwalletinfo:
+	$(BITCOINCLI) $(B1) getwalletinfo
+	$(BITCOINCLI) $(B2) getwalletinfo
+
+getchaininfo:
+	$(BITCOINCLI) $(B1) getblockchaininfo
+	$(BITCOINCLI) $(B2) getblockchaininfo
 
 sendfrom1:
 	$(BITCOINCLI) $(B1) sendtoaddress $(ADDRESS) $(AMOUNT)

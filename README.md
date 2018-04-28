@@ -28,8 +28,8 @@ $ make start
 ## Check the status of the nodes
 
 ```
-$ make getinfo
-bitcoin-cli -datadir=1  getinfo
+$ make getnetworkinfo
+bitcoin-cli -datadir=1  getnetworkinfo
 {
     "version" : 90300,
     "protocolversion" : 70002,
@@ -47,7 +47,7 @@ bitcoin-cli -datadir=1  getinfo
     "relayfee" : 0.00001000,
     "errors" : ""
 }
-bitcoin-cli -datadir=2  getinfo
+bitcoin-cli -datadir=2  getnetworkinfo
 {
     "version" : 90300,
     "protocolversion" : 70002,
@@ -93,7 +93,7 @@ $ make generate BLOCKS=200
 
 ## Verify that there is a balance on the first wallet
 ```
-$ make getinfo
+$ make getwalletinfo
 ```
 
 ## Generate a wallet address for the second wallet
@@ -111,7 +111,7 @@ $ make sendfrom1 ADDRESS=mxwPtt399zVrR62ebkTWL4zbnV1ASdZBQr AMOUNT=10
 ## Does the balance show up?
 Run the getinfo command again. Does the balance show up? Why not?
 ```
-$ make getinfo
+$ make getwalletinfo
 ```
 
 ## Generate another block
