@@ -1,0 +1,1 @@
+docker build -t qvault/bitcoin-testnet:1.0.0 .
