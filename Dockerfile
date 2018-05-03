@@ -1,7 +1,6 @@
 # bitcoin-testnet-box docker image
 
 FROM ubuntu:16.04
-MAINTAINER Alex Davis <alex@alex2006hw.com>
 MAINTAINER Sean Lavine <lavis88@gmail.com>
 
 # add bitcoind from the official PPA
